@@ -1,5 +1,7 @@
 # metallb-google-wifi-announce
 
+[![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/todaywasawesome/Atomic%20Cluster%2Fmetallb-google-wifi-announce?type=cf-1)]( https://g.codefresh.io/public/accounts/todaywasawesome/pipelines/new/608845638eccddd62359b672)
+
 Google Wifi doesn't obey normal ARP announcements made form metallb or other Kubernetes services. This creates a problem when trying to create port forwarding rules in Google Wifi because ingress and services never show up in the UI. 
 
 This project creates a loop that basically spoofs a packet from the ingress ip you want to advertise. Unfourtunately it's not enough to do this once, you must do it constantly or Google Wifi will try to change the forwarding rule to whatever MAC address it has. 
