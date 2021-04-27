@@ -33,7 +33,10 @@ steps:
     type: push
     arguments:
       candidate: '${{build}}'
-      tag: latest
+      tags: 
+      - latest
+      - ${{CF_BRANCH_TAG_NORMALIZED_LOWER_CASE}}
+      - ${{CF_SHORT_REVISION}}
       image_name: todaywasawesome/metallb-google-wifi-announce
       registry: todaywasawesome
       stage: "build"
