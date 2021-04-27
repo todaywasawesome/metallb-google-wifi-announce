@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: metallb-google-wifi-announce
+spec:
+  selector:
+    matchLabels:
+      app: metallb-google-wifi-announce
+  template:
+    metadata:
+      labels:
+        app: metallb-google-wifi-announce
+    spec:
+      containers:
+        - name: metallb-google-wifi-announce
+          image: todaywasawesome/metallb-google-wifi-announce
+          env:
+          - name: HOST_IP
+            value: "10.0.0.20" #Change to whatever ip you're trying to advertise
