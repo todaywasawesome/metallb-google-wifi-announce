@@ -19,3 +19,6 @@ python advertise.py
 
 ### In Kubernetes, K3s etc
 Modify the [daemonset yaml](deploy/kubernetes/metallb-google-wifi-announce-daemonset.yaml) with the ip address you want to advertise then apply if with `kubectl apply -f metallb-google-wifi-announce-daemonset.yaml`
+
+## Credits
+Special thanks to Etienne Champetier for showing me how to use Scapy. And to Redditor [u/jaygrok for having thread](https://www.reddit.com/r/GoogleWiFi/comments/id5qt9/port_forwarding_metallb/) that was easy to follow and documented the issue. I hope you found a resolution :) 
