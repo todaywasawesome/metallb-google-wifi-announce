@@ -8,6 +8,12 @@ This project creates a loop that basically spoofs a packet from the ingress ip y
 
 ## Usage
 
+### As a python script
+```
+export HOST_IP=[IP ADDRESS TO ADVERTISE]
+python advertise.py
+```
+
 ### As a Docker image
 `docker run -e HOST_IP=[IP ADDRESS TO ADVERTISE] todaywasawesome/metallb-google-wifi-announce`
 
