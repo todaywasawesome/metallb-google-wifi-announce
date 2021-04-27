@@ -17,3 +17,5 @@ spec:
           env:
           - name: HOST_IP
             value: "10.0.0.20" #Change to whatever ip you're trying to advertise
+          - name: DEST_IP
+            value: "8.8.8.8"
