@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: metallb-google-wifi-announce
-          image: todaywasawesome/metallb-google-wifi-announce
+          image: todaywasawesome/metallb-google-wifi-announce:latest
           env:
           - name: HOST_IP
             value: "10.0.0.20" #Change to whatever ip you're trying to advertise

@@ -5,9 +5,10 @@ import time
 import os
 
 hostip = os.environ['HOST_IP']
+destip = os.environ['DEST_IP']
 
 print("Container started")
 while True:
-	send(IP(src=hostip, dst="8.8.8.8")/ICMP())
-	print("Sent from", hostip, "sleep 2.5 mins")
+	send(IP(src=hostip, dst=destip)/ICMP())
+	print("Sent from", hostip, "to", destip,"sleep 2.5 mins")
 	time.sleep(150)
