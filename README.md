@@ -1,3 +1,6 @@
+# The effects are only temporary 
+Unfortunately the effects only work temporarily, eventually Google Wifi starts rerouting traffic based on the MAC address to the wrong ip. The workaround for now is to use an ingress with NodePort then forward to any node. Unfortunately this breaks failover but at least nodes can have static ips. 
+
 # metallb-google-wifi-announce
 
 [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/todaywasawesome/Atomic%20Cluster%2Fmetallb-google-wifi-announce?type=cf-1)]( https://g.codefresh.io/public/accounts/todaywasawesome/pipelines/new/608845638eccddd62359b672)
